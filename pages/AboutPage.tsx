@@ -66,6 +66,7 @@ const AboutPage: React.FC = () => {
 
   const intro1 = "https://github.com/stcy2828/GMusicWebsite/blob/main/material/intro1.webp?raw=true";
   const intro2 = "https://github.com/stcy2828/GMusicWebsite/blob/main/material/Intro2.webp?raw=true";
+  const intro3 = "https://github.com/stcy2828/GMusicWebsite/blob/main/material/Intro3.webp?raw=true";
   const brand1 = "https://github.com/stcy2828/GMusicWebsite/blob/main/material/Brand-1.webp?raw=true";
   const brand2 = "https://github.com/stcy2828/GMusicWebsite/blob/main/material/Brand-2.webp?raw=true";
 
@@ -206,7 +207,14 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* Navigation Link to Dedicated Brand Page */}
-      <div className="mt-40 text-center">
+      <div className="mt-16 md:mt-24 flex flex-col items-center">
+        <div className="max-w-[800px] w-full px-6 mb-16">
+          <img 
+            src={intro3} 
+            alt="G Music Vision" 
+            className="w-full h-auto rounded-sm border border-white/5 shadow-2xl"
+          />
+        </div>
         <Link 
           to="/brand" 
           className="inline-block px-14 py-5 border border-[#D4AF37] gold-text tracking-[0.4em] hover:bg-[#D4AF37] hover:text-black transition-all duration-500 font-bold uppercase text-[11px] group"

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getStoredInfo } from '../constants';
 import { InfoItem } from '../types';
+import { LanguageType } from '../constants/translations';
 import AdminAddPage from './AdminAddPage';
 import AdminUpdatePage from './AdminUpdatePage';
 import AdminDeletePage from './AdminDeletePage';
@@ -11,6 +12,7 @@ import AdminCodePage from './AdminCodePage';
 const BackendMain: React.FC = () => {
   const navigate = useNavigate();
   const [view, setView] = useState<'main' | 'add' | 'update' | 'delete' | 'code'>('main');
+  const [adminLang, setAdminLang] = useState<LanguageType>('EN');
   const [currentInfo, setCurrentInfo] = useState<InfoItem[]>([]);
 
   useEffect(() => {
@@ -18,14 +20,27 @@ const BackendMain: React.FC = () => {
       navigate('/admin-login');
     }
     // Load current info for the main dashboard preview
-    setCurrentInfo(getStoredInfo().slice(0, 5));
-  }, [navigate, view]);
+    setCurrentInfo(getStoredInfo(adminLang).slice(0, 5));
+  }, [navigate, view, adminLang]);
 
   const handleBackToMain = () => setView('main');
 
   return (
     <div className="min-h-screen bg-black pt-32 pb-24 px-6">
       <div className="max-w-4xl mx-auto">
+        {/* Language Selector */}
+        <div className="flex justify-center gap-4 mb-8">
+          {(['EN', 'TC', 'JP'] as LanguageType[]).map((lang) => (
+            <button
+              key={lang}
+              onClick={() => setAdminLang(lang)}
+              className={`px-6 py-2 border border-[#D4AF37] text-[10px] font-bold tracking-widest transition-all duration-300 ${adminLang === lang ? 'bg-[#D4AF37] text-black' : 'gold-text hover:bg-white/5'}`}
+            >
+              {lang}
+            </button>
+          ))}
+        </div>
+
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4 mb-12 justify-center">
           <button 
@@ -64,7 +79,7 @@ const BackendMain: React.FC = () => {
           {view === 'main' && (
             <div className="space-y-12">
               <div className="text-center space-y-4">
-                <h2 className="text-3xl font-serif gold-text tracking-widest uppercase">BackendMain</h2>
+                <h2 className="text-3xl font-serif gold-text tracking-widest uppercase">BackendMain ({adminLang})</h2>
                 <p className="text-gray-500 tracking-widest text-xs uppercase">Management Portal</p>
               </div>
 
@@ -107,10 +122,10 @@ const BackendMain: React.FC = () => {
               </div>
             </div>
           )}
-          {view === 'add' && <AdminAddPage onComplete={handleBackToMain} />}
-          {view === 'update' && <AdminUpdatePage onComplete={handleBackToMain} />}
-          {view === 'delete' && <AdminDeletePage onComplete={handleBackToMain} />}
-          {view === 'code' && <AdminCodePage onComplete={handleBackToMain} />}
+          {view === 'add' && <AdminAddPage onComplete={handleBackToMain} lang={adminLang} />}
+          {view === 'update' && <AdminUpdatePage onComplete={handleBackToMain} lang={adminLang} />}
+          {view === 'delete' && <AdminDeletePage onComplete={handleBackToMain} lang={adminLang} />}
+          {view === 'code' && <AdminCodePage onComplete={handleBackToMain} lang={adminLang} />}
         </div>
       </div>
     </div>
