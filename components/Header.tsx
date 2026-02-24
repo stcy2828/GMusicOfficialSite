@@ -178,7 +178,8 @@ const Header: React.FC = () => {
                   aria-label={social.name}
                 >
                   {/* Slightly smaller icon for compact view */}
-                  {React.cloneElement(social.icon as React.ReactElement, { size: 24 })}
+                  {/* Cast to React.ReactElement<any> to allow 'size' property during React.cloneElement */}
+                  {React.cloneElement(social.icon as React.ReactElement<any>, { size: 24 })}
                 </a>
               ))}
             </div>

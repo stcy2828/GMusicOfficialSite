@@ -43,12 +43,11 @@ const Footer: React.FC = () => {
         
         {/* Copyright Section */}
         <div className="pt-8 border-t border-[#D4AF37]/5 w-full flex justify-center">
-          <Link 
-            to="/admin-login"
-            className="text-gray-600 text-[10px] tracking-[0.3em] font-medium uppercase text-center hover:text-[#D4AF37] transition-colors cursor-pointer"
+          <span 
+            className="text-gray-600 text-[10px] tracking-[0.3em] font-medium uppercase text-center"
           >
             {t.footer.copyright}
-          </Link>
+          </span>
         </div>
       </div>
     </footer>
