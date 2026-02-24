@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       // 【最關鍵修正】
       // 如果你的網址是 https://stcy2828.github.io/GMusicWebsite/
       // 這裡必須填寫你的 Repository 名稱，前後加上斜線
-      base: '/GMusicWebsite/', 
+      base: '/GMusicOfficialSite/', 
 
       server: {
         port: 3000,
