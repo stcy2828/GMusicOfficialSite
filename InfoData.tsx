@@ -3,12 +3,6 @@ import { InfoItem } from './types';
 
 export const INFO_DATA_EN: InfoItem[] = [
   {
-    id: '20260503-01',
-    date: '2026-05-03',
-    title: '“MEGA K-POP Concert in Hong Kong 2026” Announced! ',
-    category: 'NEWS'
-  },
-  {
     id: '20260419-01',
     date: '2026-04-19',
     title: '“w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in Hong Kong” Announced! ',
@@ -42,12 +36,6 @@ export const INFO_DATA_EN: InfoItem[] = [
 
 export const INFO_DATA_TC: InfoItem[] = [
   {
-    id: '20260503-01',
-    date: '2026-05-03',
-    title: '正式宣佈舉辦「MEGA K-POP Concert in Hong Kong 2026」！',
-    category: 'NEWS'
-  },
-  {
     id: '20260419-01',
     date: '2026-04-19',
     title: '正式宣佈舉辦「w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in Hong Kong」！',
@@ -80,12 +68,6 @@ export const INFO_DATA_TC: InfoItem[] = [
 ];
 
 export const INFO_DATA_JP: InfoItem[] = [
- {
-    id: '20260503-01',
-    date: '2026-05-03',
-    title: '「MEGA K-POP Concert in Hong Kong 2026」開催決定！',
-    category: 'NEWS'
-  },
   {
     id: '20260419-01',
     date: '2026-04-19',
