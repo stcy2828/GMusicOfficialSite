@@ -16,12 +16,6 @@ export const INFO_DATA_EN: InfoItem[] = [
     category: 'NEWS'
   },
   {
-    id: '20260616-01',
-    date: '2026-06-16',
-    title: '“w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in KaohSiung” Announced! ',
-    category: 'NEWS'
-  },
-  {
     id: '20260419-01',
     date: '2026-04-19',
     title: '“w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in Hong Kong” Announced! ',
@@ -59,7 +53,7 @@ export const INFO_DATA_TC: InfoItem[] = [
   {
     id: '20260720-01',
     date: '2026-07-20',
-    title: '正式宣佈加場「w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in KaohSiung」 !',
+    title: '宣佈加場「w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in KaohSiung」 !',
     category: 'NEWS'
   },
   {
@@ -105,7 +99,7 @@ export const INFO_DATA_JP: InfoItem[] = [
   {
     id: '20260720-01',
     date: '2026-07-20',
-    title: '「w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in KaohSiung」追加鈴演決定！',
+    title: '「w-inds. 25th Anniversary Best Single LIVE TOUR 2026 “GOLDEN SINGLES” in KaohSiung」追加公演決定！',
     category: 'NEWS'
   },
   {
