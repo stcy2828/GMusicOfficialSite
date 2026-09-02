@@ -239,7 +239,7 @@ export const ALL_POSTERS = generatePosters();
 
 // Only show 2025 posters in the top carousel as requested.
 export const TOP_POSTERS = ALL_POSTERS
-  .filter(p => p.year === 2025)
+  .filter(p => p.year === 2025 || p.year === 2026)
   .sort(() => 0.5 - Math.random())
   .slice(0, 8);
 
