@@ -22,6 +22,17 @@ export const NAV_LINKS = [
 
 const generatePosters = () => {
   const posters = [];
+
+  // 2026 Posters: 01 to 05
+  for (let i = 1; i <= 5; i++) {
+    const num = i.toString().padStart(2, '0');
+    posters.push({
+      id: `2026-${num}`,
+      year: 2026,
+      name: `2026-${num}`,
+      imageUrl: `https://github.com/stcy2828/GMusicWebsite/blob/main/poster/2026/2026-${num}.webp?raw=true`
+    });
+  }
   
   // 2025 Posters: 01 to 16
   for (let i = 1; i <= 16; i++) {
